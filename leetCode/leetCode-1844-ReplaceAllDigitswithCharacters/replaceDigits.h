@@ -3,8 +3,8 @@
  * Arcodeo Solution
  * LeetCode Problem 1844
  */
-#ifndef NUMSMALLERTHANCURR
-#define NUMSMALLERTHANCURR
+#ifndef NUMSMALLERTHANCURR_H
+#define NUMSMALLERTHANCURR_H
 
 #include <string>
 
