@@ -1,22 +1,19 @@
 /*
- * merge.cpp
+ * fizzBuzz.cpp
  * Arcodeo Solution
- * LeetCode Problem 89
+ * LeetCode Problem 412
  */
-#include "merge.h"
+#include "fizzBuzz.h"
 using namespace std;
-void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
-{
-    int i = m - 1, j = n - 1, k = nums1.size() - 1;
-    while (i >= 0 && j >= 0)
-    {
-        if (nums1[i] >= nums2[j])
-            nums1[k--] = nums1[i--];
-        else
-            nums1[k--] = nums2[j--];
+    vector<string> fizzBuzz(int n) {
+        vector<string> res(n, "");
+        for(int i = 1; i <= n; ++i){
+            if(i % 3 == 0)
+                res[i-1] += "Fizz";
+            if(i % 5 == 0)
+                res[i-1] += "Buzz";
+            if(res[i-1] == "")
+                res[i-1] = to_string(i);
+        }
+        return res;
     }
-    while (i >= 0)
-        nums1[k--] = nums1[i--];
-    while (j >= 0)
-        nums1[k--] = nums2[j--];
-}
